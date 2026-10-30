@@ -35,3 +35,5 @@ Bibliotecas carregadas por CDN: GSAP 3.12.5 com ScrollTrigger (cdnjs) e Lenis 1.
 ## Publicação
 
 Publicado no GitHub Pages a partir da branch `main`. Cada push na `main` atualiza o site.
+
+O Pages guarda CSS e JS em cache por 10 minutos. Por isso os arquivos são chamados com versão (`styles.css?v=20261030a`). **A cada publicação, troque o `?v=` em `index.html` e `signup.html`.** Sem isso, quem já abriu a página continua vendo a versão antiga.
