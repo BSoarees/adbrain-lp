@@ -42,7 +42,7 @@ Regra visual ("menos cara de IA"): evitar cards com borda brilhante, pílulas e 
 5. **Planos:** seletor mensal/anual e a faixa "Mais de 25 clientes ou mais de 25 pessoas no time? → Fale com a gente".
 6. **CTA final:** "Os dados dos seus clientes já estão falando. Está na hora de ouvir."
 
-Há um CTA em todas as seções. Todos levam ao cadastro (`signup.html`), e o "Fale com a gente" leva ao WhatsApp. No celular aparece uma barra fixa com "Fale com a gente" e "Testar grátis".
+Há um CTA em todas as seções. Todos levam ao cadastro (`signup.html`), e o "Fale com a gente" leva ao WhatsApp. No celular aparece uma barra fixa com "Fale com a gente" e "Testar grátis". O processo, no celular, não usa painel fixo: cada capítulo mostra o texto e, logo abaixo, a própria tela do produto (as cenas são clonadas por JS), para a rolagem fluir sem sobreposição.
 
 ## Fontes dos dados (tudo tirado do produto, nada inventado)
 

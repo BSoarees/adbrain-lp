@@ -155,6 +155,33 @@ gsap.from(".statement__t, .statement__s, .statement__cta", { y: 40, opacity: 0, 
 /* ---------- scroll story ---------- */
 const scenes = $$(".scene"), dots = $$(".stage__dots i"), chapters = $$(".story .chap");
 const PARTS = ".plat, .sc-int__core, .sc-kpis > div, .sc-ctx__sig, .sc-ctx__list li, .sc-rec .pill, .sc-rec h3, .sc-rec dl > div, .sc-flow li, .sc-port > div, .sc-doc, .sc-doc li, .sc-note";
+/* mobile: no sticky panel. Each chapter gets its own copy of its scene right
+   under the text, so the story reads top to bottom with nothing overlapping.
+   Cloned before setScene() so the copies carry no inline animation styles. */
+chapters.forEach((c, i) => {
+  const wrap = document.createElement("div");
+  wrap.className = "chap__scene";
+  wrap.setAttribute("aria-hidden", "true");
+  wrap.innerHTML = `<div class="stage__bar"><i></i><i></i><i></i><span class="mono">AdBrain · Loja Aurora</span></div>`;
+  const sc = scenes[i].cloneNode(true);
+  sc.classList.add("is-on");
+  wrap.appendChild(sc);
+  c.insertBefore(wrap, $(".chap__cta", c));
+});
+ScrollTrigger.matchMedia({
+  "(max-width: 1000px)": () => {
+    if (reduce) return;
+    $$(".chap__scene").forEach((w) => {
+      gsap.from(w, { y: 30, opacity: 0, duration: 0.9, ease: "expo.out", scrollTrigger: { trigger: w, start: "top 88%" } });
+      gsap.from($$(PARTS, w), { y: 14, opacity: 0, duration: 0.7, ease: "expo.out", stagger: 0.06, delay: 0.15, scrollTrigger: { trigger: w, start: "top 85%" } });
+      $$(".scene path", w).forEach((p) => {
+        const L = p.getTotalLength();
+        gsap.fromTo(p, { strokeDasharray: L, strokeDashoffset: L }, { strokeDashoffset: 0, duration: 1.2, ease: "power2.inOut", scrollTrigger: { trigger: w, start: "top 80%" } });
+      });
+    });
+  },
+});
+
 let current = -1;
 const draw = (scene) => $$("path", scene).forEach((p) => {
   if (p.closest(".stage__bar")) return;

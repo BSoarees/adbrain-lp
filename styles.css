@@ -128,6 +128,7 @@ ol, ul { list-style: none; }
 .chap h2 { font-size: clamp(30px, 3.4vw, 52px); font-weight: 600; line-height: 1.05; letter-spacing: -.04em; }
 .chap p { color: var(--muted); font-size: 17px; margin-top: 18px; max-width: 460px; }
 .story__stage { position: relative; }
+.chap__scene { display: none; }
 .stage { position: sticky; top: 14vh; height: 72vh; display: flex; flex-direction: column; border-radius: 14px; overflow: hidden;
   background: linear-gradient(180deg, hsl(222 47% 10% / .8), hsl(222 47% 6% / .9)); box-shadow: 0 0 0 1px var(--hair), 0 50px 120px hsl(222 80% 2% / .6), 0 0 120px hsla(190, 95%, 55%, .1);
   backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
@@ -258,11 +259,18 @@ ol, ul { list-style: none; }
   .hero { grid-template-columns: 1fr; align-items: end; padding-bottom: 110px; }
   .hero__side { justify-self: start; }
   .tile { opacity: .55; }
+  /* processo no celular: sem painel fixo; cada capítulo leva a própria tela */
   .story { grid-template-columns: 1fr; gap: 0; }
-  .story__stage { order: -1; position: sticky; top: 64px; z-index: 2; height: 48vh; margin-top: 12vh; }
-  .stage { position: relative; top: 0; height: 100%; }
-  .story__texts { padding: 4vh 0 20vh; }
-  .chap { min-height: 62vh; justify-content: flex-start; padding-top: 4vh; }
+  .story__stage { display: none; }
+  .story__texts { padding: 24px 0 40px; }
+  .chap { min-height: 0; opacity: 1; padding: 44px 0; border-top: 1px solid var(--hair); }
+  .chap:first-child { border-top: 0; }
+  .chap h2 { font-size: clamp(28px, 7.4vw, 40px); }
+  .chap p { font-size: 16px; margin-top: 12px; }
+  .chap__scene { display: block; margin-top: 26px; border-radius: 16px; overflow: hidden; background: linear-gradient(180deg, hsl(222 47% 10% / .8), hsl(222 47% 6% / .9)); box-shadow: 0 0 0 1px var(--hair), 0 30px 60px hsl(222 80% 2% / .5); }
+  .chap__scene .stage__bar { padding: 11px 14px; }
+  .chap__scene .scene { position: static; opacity: 1; visibility: visible; transform: none; padding: 18px 16px 20px; gap: 14px; }
+  .chap__cta { margin-top: 20px; }
   .who__row { grid-template-columns: 1fr; gap: 8px; }
   .plans__cols { grid-template-columns: 1fr; }
   .plan, .plan + .plan { padding: 30px 0; border-left: 0; border-bottom: 1px solid var(--hair); }
