@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AdBrain.ai — Do dado à decisão</title>
+<meta name="description" content="AdBrain.ai é o copiloto de decisão para mídia paga. Conecta suas contas, interpreta os números com contexto e entrega ações priorizadas." />
+<link rel="icon" href="../../assets/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div class="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <img src="../../assets/adbrain-mascot.png" alt="" class="loader__mascot" />
+    <div class="loader__row">
+      <span class="mono">AdBrain.ai</span>
+      <span class="mono loader__count">000</span>
+    </div>
+    <div class="loader__bar"><span></span></div>
+    <div class="loader__words mono">
+      <span>dados</span><span>contexto</span><span>decisão</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CURSOR ============ -->
+<div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<!-- ============ HEADER ============ -->
+<header class="nav">
+  <a href="#top" class="logo" aria-label="AdBrain.ai">
+    <span class="logo__mark"></span>Ad<b>Brain</b><i>.ai</i>
+  </a>
+  <nav class="nav__links" aria-label="Navegação principal">
+    <a href="#metodo" data-cursor="hover">Método</a>
+    <a href="#diagnostico" data-cursor="hover">Produto</a>
+    <a href="#ecossistema" data-cursor="hover">Ecossistema</a>
+    <a href="#planos" data-cursor="hover">Planos</a>
+  </nav>
+  <div class="nav__cta">
+    <a href="https://adbrain.com.br/auth" class="link-u" data-cursor="hover">Entrar</a>
+    <a href="https://adbrain.com.br/signup" class="btn btn--sm magnetic" data-cursor="hover"><span>Começar grátis</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <canvas class="hero__canvas" aria-hidden="true"></canvas>
+  <div class="hero__glow" aria-hidden="true"></div>
+
+  <div class="hero__meta mono">
+    <span>(01)</span>
+    <span>Inteligência estratégica para mídia paga</span>
+    <span class="hide-sm">BR — 2026</span>
+  </div>
+
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <h1 class="hero__title">
+        <span class="line"><span class="split">Seus anúncios</span></span>
+        <span class="line"><span class="split">têm dados.</span></span>
+        <span class="line"><span class="split muted">Nós entregamos</span></span>
+        <span class="line"><span class="split grad">decisões.</span></span>
+      </h1>
+      <p class="hero__sub fade-up">
+        O AdBrain.ai é o copiloto de decisão para mídia paga. Conecta suas contas, interpreta os números com o contexto do seu negócio e entrega ações claras, priorizadas e com impacto mensurável.
+      </p>
+      <div class="hero__ctas fade-up">
+        <a href="https://adbrain.com.br/signup" class="btn magnetic" data-cursor="hover"><span>Começar 7 dias grátis</span><em>→</em></a>
+        <a href="#diagnostico" class="btn btn--ghost magnetic" data-cursor="hover"><span>Ver como funciona</span></a>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="orbit orbit--1"></div>
+      <div class="orbit orbit--2"></div>
+      <div class="orbit orbit--3"></div>
+      <div class="mascot-wrap">
+        <div class="mascot-halo"></div>
+        <img src="../../assets/adbrain-mascot.png" alt="Mascote AdBrain" class="mascot" />
+      </div>
+      <div class="chip chip--a">
+        <span class="mono chip__k">ROAS</span>
+        <span class="chip__v">3,8x</span>
+        <span class="chip__d down">−18%</span>
+      </div>
+      <div class="chip chip--b">
+        <span class="dot dot--hot"></span>
+        <span>Prioridade alta</span>
+      </div>
+      <div class="chip chip--c">
+        <span class="mono chip__k">CPA</span>
+        <span class="chip__v">R$ 74,20</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__foot mono">
+    <span>Role para explorar</span>
+    <span class="scroll-line"><i></i></span>
+    <span>Do dado à decisão</span>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<section class="marquee" aria-label="Métricas lidas pelo AdBrain">
+  <div class="marquee__track" data-dir="-1">
+    <div class="marquee__row">
+      <span>Investimento <b>R$ 48,2 mil</b></span><span class="sep">✦</span>
+      <span>Impressões <b>1,8 mi</b></span><span class="sep">✦</span>
+      <span>Cliques <b>42.180</b></span><span class="sep">✦</span>
+      <span>CTR <b>2,34%</b></span><span class="sep">✦</span>
+      <span>CPC <b>R$ 1,14</b></span><span class="sep">✦</span>
+      <span>CPA <b>R$ 74,20</b></span><span class="sep">✦</span>
+      <span>ROAS <b>3,8x</b></span><span class="sep">✦</span>
+      <span>Conversões <b>650</b></span><span class="sep">✦</span>
+    </div>
+  </div>
+  <div class="marquee__track marquee__track--alt" data-dir="1">
+    <div class="marquee__row">
+      <span>Performance</span><span class="sep">/</span>
+      <span>Eficiência</span><span class="sep">/</span>
+      <span>Tendências</span><span class="sep">/</span>
+      <span>Diagnóstico</span><span class="sep">/</span>
+      <span>Hipóteses</span><span class="sep">/</span>
+      <span>Recomendações</span><span class="sep">/</span>
+      <span>Decisões</span><span class="sep">/</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANIFESTO ============ -->
+<section class="manifesto">
+  <div class="label mono"><span>(02)</span><span>O problema</span></div>
+  <p class="manifesto__text reveal-words">
+    Dados mostram o que aconteceu. Mas não dizem o que fazer agora. O próximo passo exige <em>interpretação</em>, <em>contexto</em> e <em>prioridade</em> — e é exatamente aí que o AdBrain trabalha.
+  </p>
+</section>
+
+<!-- ============ MÉTODO (index list) ============ -->
+<section class="method" id="metodo">
+  <div class="section-head">
+    <div class="label mono"><span>(03)</span><span>O método</span></div>
+    <h2 class="h2"><span class="line"><span class="split">Do dado</span></span><span class="line"><span class="split grad">à decisão.</span></span></h2>
+    <p class="section-head__p fade-up">Oito etapas, um fluxo. Passe o mouse em cada uma para ver o que acontece por dentro.</p>
+  </div>
+
+  <ol class="index">
+    <li class="index__row" data-preview="0" data-cursor="view">
+      <span class="index__n mono">01</span>
+      <span class="index__eyebrow mono">Conecte suas contas</span>
+      <h3 class="index__t">Tudo começa com os seus anúncios.</h3>
+      <p class="index__p">Conecte suas contas. O AdBrain organiza os dados para você.</p>
+      <span class="index__arrow">↗</span>
+    </li>
+    <li class="index__row" data-preview="1" data-cursor="view">
+      <span class="index__n mono">02</span>
+      <span class="index__eyebrow mono">Dados</span>
+      <h3 class="index__t">Dados mostram o que aconteceu.</h3>
+      <p class="index__p">Investimento, alcance, cliques, CTR, CPC, CPA, ROAS e conversões em uma leitura completa.</p>
+      <span class="index__arrow">↗</span>
+    </li>
+    <li class="index__row" data-preview="2" data-cursor="view">
+      <span class="index__n mono">03</span>
+      <span class="index__eyebrow mono">Interpretação</span>
+      <h3 class="index__t">O AdBrain analisa o que os números estão tentando dizer.</h3>
+      <p class="index__p">A IA cruza os sinais da conta para descobrir onde está o problema.</p>
+      <span class="index__arrow">↗</span>
+    </li>
+    <li class="index__row" data-preview="3" data-cursor="view">
+      <span class="index__n mono">04</span>
+      <span class="index__eyebrow mono">Contexto estratégico</span>
+      <h3 class="index__t">Porque um número sozinho não conhece o seu negócio.</h3>
+      <p class="index__p">Benchmarks por setor, modelo de negócio e foco geográfico.</p>
+      <span class="index__arrow">↗</span>
+    </li>
+    <li class="index__row" data-preview="4" data-cursor="view">
+      <span class="index__n mono">05</span>
+      <span class="index__eyebrow mono">Recomendações</span>
+      <h3 class="index__t">Não queremos te entregar mais dashboards.</h3>
+      <p class="index__p">Ação, motivo, evidências e impacto esperado — em uma recomendação.</p>
+      <span class="index__arrow">↗</span>
+    </li>
+    <li class="index__row" data-preview="5" data-cursor="view">
+      <span class="index__n mono">06</span>
+      <span class="index__eyebrow mono">Hipóteses</span>
+      <h3 class="index__t">Quando ainda não há resposta, existe uma hipótese.</h3>
+      <p class="index__p">Separa o que os dados sustentam do que ainda precisa ser validado.</p>
+      <span class="index__arrow">↗</span>
+    </li>
+    <li class="index__row" data-preview="6" data-cursor="view">
+      <span class="index__n mono">07</span>
+      <span class="index__eyebrow mono">Operações</span>
+      <h3 class="index__t">Uma conta ou uma operação inteira.</h3>
+      <p class="index__p">Workspaces por cliente, permissões por função e várias contas em uma visão.</p>
+      <span class="index__arrow">↗</span>
+    </li>
+    <li class="index__row" data-preview="7" data-cursor="view">
+      <span class="index__n mono">08</span>
+      <span class="index__eyebrow mono">Relatórios</span>
+      <h3 class="index__t">Transforme análise em comunicação.</h3>
+      <p class="index__p">Relatórios para clientes, reuniões, gestores e decisões internas.</p>
+      <span class="index__arrow">↗</span>
+    </li>
+  </ol>
+
+  <!-- floating preview (desktop hover) -->
+  <div class="preview" aria-hidden="true">
+    <div class="preview__inner">
+      <div class="pv" data-i="0">
+        <div class="pv__head mono">Integrações</div>
+        <div class="pv__list">
+          <div class="pv__item"><span class="dot dot--ok"></span>Meta Ads <em>Conectada</em></div>
+          <div class="pv__item"><span class="dot dot--ok"></span>Google Ads <em>Conectada</em></div>
+          <div class="pv__item"><span class="dot"></span>TikTok Ads <em>Em breve</em></div>
+        </div>
+        <div class="pv__foot mono">OAuth · sem compartilhar senha</div>
+      </div>
+      <div class="pv" data-i="1">
+        <div class="pv__head mono">Performance por campanha</div>
+        <div class="pv__bars"><i style="--h:62%"></i><i style="--h:84%"></i><i style="--h:48%"></i><i style="--h:91%"></i><i style="--h:38%"></i><i style="--h:72%"></i><i style="--h:55%"></i></div>
+        <div class="pv__kpis"><span>CTR <b>2,34%</b></span><span>CPC <b>R$ 1,14</b></span><span>ROAS <b>3,8x</b></span></div>
+      </div>
+      <div class="pv" data-i="2">
+        <div class="pv__head mono">Da métrica ao diagnóstico</div>
+        <div class="pv__list">
+          <div class="pv__item"><span class="dot dot--hot"></span>Detecta gargalos de performance</div>
+          <div class="pv__item"><span class="dot dot--warn"></span>Cruza métricas e sinais da conta</div>
+          <div class="pv__item"><span class="dot dot--ok"></span>Prioriza o que realmente importa</div>
+        </div>
+      </div>
+      <div class="pv" data-i="3">
+        <div class="pv__head mono">Contexto do negócio</div>
+        <div class="pv__tags"><span>E-commerce</span><span>Ticket médio</span><span>Sudeste</span><span>Margem</span><span>Sazonalidade</span><span>Meta de CPA</span></div>
+        <div class="pv__foot mono">Benchmark personalizado</div>
+      </div>
+      <div class="pv" data-i="4">
+        <div class="pv__head mono"><span class="dot dot--hot"></span> Prioridade alta</div>
+        <div class="pv__big">Redistribua parte do investimento.</div>
+        <div class="pv__small">A campanha concentra grande parte da verba e apresenta eficiência inferior à média da conta.</div>
+      </div>
+      <div class="pv" data-i="5">
+        <div class="pv__head mono">Pergunta em aberto</div>
+        <div class="pv__big">O que está causando essa queda?</div>
+        <div class="pv__tags"><span>Sustentado</span><span class="o">A validar</span></div>
+      </div>
+      <div class="pv" data-i="6">
+        <div class="pv__head mono">Workspaces</div>
+        <div class="pv__list">
+          <div class="pv__item"><span class="avatar">CL</span>Cliente Loja <em>3 contas</em></div>
+          <div class="pv__item"><span class="avatar">SA</span>Saúde Plus <em>2 contas</em></div>
+          <div class="pv__item"><span class="avatar">ED</span>EduTech <em>5 contas</em></div>
+        </div>
+      </div>
+      <div class="pv" data-i="7">
+        <div class="pv__head mono">Relatório executivo</div>
+        <div class="pv__big">Pronto para reunião.</div>
+        <div class="pv__small">Resumo, evidências e próximos passos.</div>
+        <div class="pv__lines"><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIAGNÓSTICO (pinned) ============ -->
+<section class="diag" id="diagnostico">
+  <div class="diag__pin">
+    <div class="diag__left">
+      <div class="label mono"><span>(04)</span><span>Da análise à ação</span></div>
+      <h2 class="h2 diag__title">
+        <span class="diag__step is-on" data-s="0">Um sinal isolado não é uma resposta.</span>
+        <span class="diag__step" data-s="1">A IA cruza os sinais e acha a causa.</span>
+        <span class="diag__step" data-s="2">E entrega o próximo passo claro.</span>
+      </h2>
+      <div class="diag__progress mono">
+        <span class="diag__num">01</span><span class="diag__track"><i></i></span><span>03</span>
+      </div>
+    </div>
+
+    <div class="diag__right">
+      <div class="signal card">
+        <div class="card__top mono"><span class="dot dot--hot"></span>Sinal isolado</div>
+        <div class="signal__v">ROAS caiu <b>18%</b></div>
+        <svg class="spark" viewBox="0 0 600 80" preserveAspectRatio="none" aria-hidden="true">
+          <path class="spark__path" d="M0,20 C60,18 100,26 160,22 C220,18 260,24 320,30 C380,36 420,52 480,58 C520,62 560,66 600,70" />
+        </svg>
+      </div>
+
+      <div class="diagnose card">
+        <div class="card__top mono">Diagnóstico</div>
+        <p>A queda está concentrada em <b>uma campanha específica</b> após mudança na distribuição de investimento.</p>
+        <div class="diagnose__chips">
+          <span>Gargalo detectado</span><span>Sinais cruzados</span><span>Prioridade definida</span>
+        </div>
+      </div>
+
+      <div class="rec card">
+        <div class="card__top mono"><span class="dot dot--hot"></span>Recomendação · prioridade alta</div>
+        <div class="rec__grid">
+          <div class="rec__f"><span class="mono">Ação</span><p>Redistribua parte do investimento.</p></div>
+          <div class="rec__f"><span class="mono">Motivo</span><p>A campanha concentra a verba com eficiência abaixo da média da conta.</p></div>
+          <div class="rec__f"><span class="mono">Evidências</span><p>Queda de ROAS isolada em 1 campanha, após realocação de orçamento.</p></div>
+          <div class="rec__f"><span class="mono">Impacto</span><p>Recuperar eficiência antes de escalar. Resultado visível em 48–72h.</p></div>
+        </div>
+        <div class="rec__actions">
+          <span class="pill pill--ok">Marcar como implementada</span><span class="pill">Adiar</span><span class="pill">Ignorar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRINCÍPIOS ============ -->
+<section class="principles">
+  <div class="section-head">
+    <div class="label mono"><span>(05)</span><span>Princípios</span></div>
+    <h2 class="h2"><span class="line"><span class="split">Não é mais um dashboard.</span></span><span class="line"><span class="split muted">É um motor de decisão.</span></span></h2>
+  </div>
+  <div class="grid6">
+    <article class="tile" data-cursor="hover">
+      <span class="tile__n mono">/01</span>
+      <h3>Foco em decisão</h3>
+      <p>Cada análise termina em uma ação, não em métricas de vaidade. Você sabe exatamente o que fazer a seguir.</p>
+    </article>
+    <article class="tile" data-cursor="hover">
+      <span class="tile__n mono">/02</span>
+      <h3>Inteligência contextual</h3>
+      <p>Benchmarks adaptados ao seu setor, modelo de negócio e foco geográfico. Nada de solução genérica.</p>
+    </article>
+    <article class="tile" data-cursor="hover">
+      <span class="tile__n mono">/03</span>
+      <h3>Sistema de campanhas</h3>
+      <p>Estrutura, públicos, criativos e fluxo de orçamento analisados juntos — como um ecossistema.</p>
+    </article>
+    <article class="tile" data-cursor="hover">
+      <span class="tile__n mono">/04</span>
+      <h3>Camada de confiança</h3>
+      <p>Só recomendamos quando os dados estão estáveis. Fases de aprendizado e períodos voláteis são sinalizados.</p>
+    </article>
+    <article class="tile" data-cursor="hover">
+      <span class="tile__n mono">/05</span>
+      <h3>Impacto financeiro primeiro</h3>
+      <p>Toda recomendação traz a estimativa de impacto na sua métrica principal.</p>
+    </article>
+    <article class="tile" data-cursor="hover">
+      <span class="tile__n mono">/06</span>
+      <h3>Núcleo baseado em regras</h3>
+      <p>Regras determinísticas detectam problemas. A IA explica e contextualiza — nunca inventa dados.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ ECOSSISTEMA ============ -->
+<section class="eco" id="ecossistema">
+  <div class="eco__copy">
+    <div class="label mono"><span>(06)</span><span>Ecossistema AdBrain</span></div>
+    <h2 class="h2"><span class="line"><span class="split">O AdBrain não termina</span></span><span class="line"><span class="split grad">na mídia paga.</span></span></h2>
+    <p class="fade-up">Mídia, contexto comercial e operação conectados para transformar sinais espalhados em uma visão única de decisão.</p>
+    <ul class="eco__list">
+      <li><b>Meta Ads</b><span>Performance de campanhas e sinais para análise estratégica.</span></li>
+      <li><b>Google Ads</b><span>Busca, mídia paga e reporting na mesma leitura.</span></li>
+      <li><b>TikTok Ads</b><span>Expansão da leitura de criativos e aquisição.</span></li>
+      <li><b>CRM</b><span>Contexto comercial para aproximar mídia de resultado.</span></li>
+      <li><b>Automações</b><span>Alertas e fluxos conectando inteligência e operação.</span></li>
+    </ul>
+  </div>
+  <div class="eco__stage" aria-hidden="true">
+    <div class="eco__ring eco__ring--1"></div>
+    <div class="eco__ring eco__ring--2"></div>
+    <div class="eco__spin">
+      <span class="eco__node" style="--a:0deg">Meta Ads</span>
+      <span class="eco__node" style="--a:72deg">Google Ads</span>
+      <span class="eco__node" style="--a:144deg">TikTok Ads</span>
+      <span class="eco__node" style="--a:216deg">CRM</span>
+      <span class="eco__node" style="--a:288deg">Automações</span>
+    </div>
+    <div class="eco__core">
+      <img src="../../assets/adbrain-mascot.png" alt="" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUEM ============ -->
+<section class="who">
+  <div class="label mono"><span>(07)</span><span>Para quem é</span></div>
+  <h2 class="h2 who__h"><span class="line"><span class="split">Feito para quem precisa decidir,</span></span><span class="line"><span class="split muted">não apenas olhar métricas.</span></span></h2>
+  <div class="who__rows">
+    <a class="who__row" href="https://adbrain.com.br/signup" data-cursor="hover">
+      <span class="who__fill"></span>
+      <span class="who__t">Gestores de tráfego</span>
+      <span class="who__p">Encontre prioridades e transforme dados em decisões com mais rapidez.</span>
+    </a>
+    <a class="who__row" href="https://adbrain.com.br/signup" data-cursor="hover">
+      <span class="who__fill"></span>
+      <span class="who__t">Agências</span>
+      <span class="who__p">Visualize várias contas e veja onde sua equipe precisa agir primeiro.</span>
+    </a>
+    <a class="who__row" href="https://adbrain.com.br/signup" data-cursor="hover">
+      <span class="who__fill"></span>
+      <span class="who__t">Times de marketing</span>
+      <span class="who__p">Mídia paga, contexto e decisões em uma única visão.</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ SEGURANÇA ============ -->
+<section class="sec">
+  <div class="sec__inner">
+    <div class="label mono"><span>(08)</span><span>Segurança e controle</span></div>
+    <h2 class="h2"><span class="line"><span class="split">Seus dados</span></span><span class="line"><span class="split grad">continuam seus.</span></span></h2>
+    <div class="sec__grid">
+      <div class="sec__i"><span class="mono">OAuth</span><p>Autorização sem compartilhar senha com o AdBrain.</p></div>
+      <div class="sec__i"><span class="mono">Contas permitidas</span><p>Você escolhe exatamente quais contas o AdBrain lê.</p></div>
+      <div class="sec__i"><span class="mono">Isolamento</span><p>Cada workspace tem dados isolados por cliente.</p></div>
+      <div class="sec__i"><span class="mono">Permissões</span><p>Dono, admin, editor e leitor — acesso por função.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLANOS ============ -->
+<section class="plans" id="planos">
+  <div class="section-head">
+    <div class="label mono"><span>(09)</span><span>Planos founding</span></div>
+    <h2 class="h2"><span class="line"><span class="split">Transforme dados em</span></span><span class="line"><span class="split grad">rotina de decisão.</span></span></h2>
+  </div>
+  <div class="plans__grid">
+    <article class="plan" data-cursor="hover">
+      <div class="plan__name mono">Gestor Solo</div>
+      <div class="plan__price"><small>R$</small><span class="count" data-to="147">147</span><em>/mês</em></div>
+      <ul>
+        <li>Até 3 clientes ativos</li>
+        <li>1 usuário</li>
+        <li>150 créditos/mês</li>
+        <li>Motor de análise completo</li>
+      </ul>
+      <a href="https://adbrain.com.br/signup" class="btn btn--ghost btn--block magnetic"><span>Começar 7 dias grátis</span></a>
+    </article>
+    <article class="plan plan--hot" data-cursor="hover">
+      <div class="plan__badge mono">Mais escolhido</div>
+      <div class="plan__name mono">Agência</div>
+      <div class="plan__price"><small>R$</small><span class="count" data-to="297">297</span><em>/mês</em></div>
+      <ul>
+        <li>Até 10 clientes ativos</li>
+        <li>3 usuários com colaboração</li>
+        <li>500 créditos/mês</li>
+        <li>Histórico de decisões</li>
+      </ul>
+      <a href="https://adbrain.com.br/signup" class="btn btn--block magnetic"><span>Começar 7 dias grátis</span></a>
+    </article>
+    <article class="plan" data-cursor="hover">
+      <div class="plan__name mono">Agência Pro</div>
+      <div class="plan__price"><small>R$</small><span class="count" data-to="497">497</span><em>/mês</em></div>
+      <ul>
+        <li>Até 25 clientes ativos</li>
+        <li>5 usuários · múltiplos workspaces</li>
+        <li>1.200 créditos/mês</li>
+        <li>Feedback prioritário e acesso antecipado</li>
+      </ul>
+      <a href="https://adbrain.com.br/signup" class="btn btn--ghost btn--block magnetic"><span>Começar 7 dias grátis</span></a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="final">
+  <div class="final__inner">
+    <p class="final__a">Seus dados já estão falando.</p>
+    <p class="final__b grad">Está na hora de ouvi-los.</p>
+    <a href="https://adbrain.com.br/signup" class="btn btn--xl magnetic" data-cursor="hover"><span>Comece agora</span><em>→</em></a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__top">
+    <p class="foot__tag">O AdBrain.ai transforma dados em decisões.</p>
+    <nav class="foot__links">
+      <a href="https://adbrain.com.br/privacy" class="link-u">Privacidade</a>
+      <a href="https://adbrain.com.br/terms" class="link-u">Termos</a>
+      <a href="https://adbrain.com.br/data-deletion" class="link-u">Exclusão de dados</a>
+      <a href="mailto:suporte@adbrain.com.br" class="link-u">Contato</a>
+    </nav>
+  </div>
+  <div class="foot__word" aria-hidden="true"><span>AdBrain</span></div>
+  <div class="foot__bottom mono"><span>© 2026 AdBrain.ai</span><span>Um produto do ecossistema Crxate</span></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

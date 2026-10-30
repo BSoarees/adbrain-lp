@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Criar conta · AdBrain.ai</title>
+<meta name="description" content="Crie sua conta e comece com 7 dias grátis. Conecte o Meta Ads e o Google Ads dos seus clientes." />
+<link rel="icon" href="assets/adbrain-logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="signup.css" />
+</head>
+<body class="su">
+
+<div class="beam" aria-hidden="true"></div>
+
+<header class="su-nav">
+  <a href="index.html" class="logo" aria-label="AdBrain.ai, voltar para o início">
+    <img src="assets/adbrain-logo.svg" alt="" class="logo__mark" />
+    <span>AdBrain<i>.ai</i></span>
+  </a>
+  <a href="https://adbrain.com.br/auth" class="su-nav__in">Já tem conta? <b>Entrar</b></a>
+</header>
+
+<main class="su-main">
+
+  <aside class="su-aside">
+    <p class="su-eyebrow mono">7 dias grátis</p>
+    <h1 class="su-h">Veja o AdBrain nas contas dos <span class="grad-text">seus clientes.</span></h1>
+
+    <div class="su-plan" hidden>
+      <span class="su-plan__k mono">Plano escolhido</span>
+      <b class="su-plan__t"></b>
+      <span class="su-plan__s"></span>
+      <a href="index.html#planos" class="su-plan__x">Trocar</a>
+    </div>
+
+    <ol class="su-steps">
+      <li>
+        <span class="su-steps__n">1</span>
+        <div><b>Crie sua conta</b><span>Nome, e-mail, senha e CPF.</span></div>
+      </li>
+      <li>
+        <span class="su-steps__n">2</span>
+        <div><b>Conecte suas contas de anúncio</b><span>Login oficial na própria plataforma. Você nunca passa a senha para a gente.</span>
+          <span class="su-logos"><span><img src="assets/logos/meta.svg" alt="" />Meta Ads</span><span><img src="assets/logos/google-ads.svg" alt="" />Google Ads</span></span>
+        </div>
+      </li>
+      <li>
+        <span class="su-steps__n">3</span>
+        <div><b>Receba a primeira análise</b><span>Onde agir primeiro em cada cliente, com motivo e evidência.</span></div>
+      </li>
+    </ol>
+
+    <div class="su-trust">
+      <span class="gp"><img src="assets/logos/google-g.svg" alt="" /><b>Google</b> Partner</span>
+      <span class="su-trust__t">Garantia de reembolso por 7 dias após a primeira cobrança.</span>
+    </div>
+  </aside>
+
+  <section class="su-card" aria-labelledby="su-title">
+    <h2 id="su-title" class="su-card__h">Crie sua conta</h2>
+    <p class="su-card__p">Comece com 7 dias grátis.</p>
+
+    <form id="signup" novalidate>
+      <label class="sf">
+        <span class="sf__l">Nome completo</span>
+        <input id="fullName" name="fullName" autocomplete="name" placeholder="Seu nome" required />
+        <span class="sf__e" data-for="fullName"></span>
+      </label>
+
+      <label class="sf">
+        <span class="sf__l">E-mail</span>
+        <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@agencia.com.br" required />
+        <span class="sf__e" data-for="email"></span>
+      </label>
+
+      <label class="sf">
+        <span class="sf__l">Senha</span>
+        <span class="sf__pw">
+          <input id="password" name="password" type="password" autocomplete="new-password" placeholder="Crie uma senha" required />
+          <button type="button" class="sf__eye" aria-label="Mostrar senha" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </span>
+        <span class="rules" aria-live="polite">
+          <span data-rule="len">8+ caracteres</span>
+          <span data-rule="up">1 maiúscula</span>
+          <span data-rule="low">1 minúscula</span>
+          <span data-rule="num">1 número</span>
+        </span>
+        <span class="sf__e" data-for="password"></span>
+      </label>
+
+      <label class="sf">
+        <span class="sf__l">CPF</span>
+        <input id="cpf" name="cpf" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" maxlength="14" required />
+        <span class="sf__e" data-for="cpf"></span>
+      </label>
+
+      <button type="submit" class="btn btn--block su-submit"><span>Começar 7 dias grátis</span><em>→</em></button>
+
+      <p class="su-legal">Ao criar a conta, você concorda com os <a href="https://adbrain.com.br/terms" class="link-u">Termos</a> e a <a href="https://adbrain.com.br/privacy" class="link-u">Política de Privacidade</a>.</p>
+    </form>
+
+    <div class="su-done" hidden>
+      <img src="assets/adbrain-logo.svg" alt="" />
+      <h2>Tudo certo, <span class="su-done__n"></span>.</h2>
+      <p>Agora é conectar o Meta Ads e o Google Ads para o AdBrain começar a ler as contas.</p>
+      <a href="https://adbrain.com.br/auth" class="btn"><span>Continuar no AdBrain</span><em>→</em></a>
+    </div>
+
+    <p class="su-help">Mais de 25 clientes ou um time grande? <a href="https://wa.me/message/EJFPOSDFKM4EI1" target="_blank" rel="noopener" class="link-u">Fale com a gente</a></p>
+  </section>
+
+  <div class="su-after"></div>
+
+</main>
+
+<footer class="su-foot mono">
+  <a href="index.html" class="link-u">Voltar para o início</a>
+  <span>© 2026 AdBrain.ai</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="signup.js"></script>
+</body>
+</html>

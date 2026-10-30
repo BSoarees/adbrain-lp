@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AdBrain.ai · Saiba onde agir em cada conta</title>
+<meta name="description" content="Para agências, assessorias e gestores de tráfego. Conecte o Meta Ads e o Google Ads dos seus clientes e saiba onde agir primeiro em cada conta." />
+<link rel="icon" href="../../assets/adbrain-logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ícones (traço branco, usados nos tiles e nas cenas) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-meta" viewBox="0 0 24 24"><path d="M3 15c0-4 2-7.5 4.8-7.5 2.2 0 3.7 2 5.5 5s3.2 5 5 5c1.7 0 2.7-1.5 2.7-3.7 0-3-1.5-5.8-3.5-5.8-1.7 0-3.2 1.7-4.7 4.2S9.8 17.5 7.5 17.5C5 17.5 3 16.5 3 15z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+  <symbol id="i-google" viewBox="0 0 24 24"><path d="M12 4.5 18.5 16M12 4.5 5.5 16" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/><circle cx="5.5" cy="17.5" r="2.4" fill="currentColor"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 20v-8M12 20V5M19 20v-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8M15 7h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20M10 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M20 20v-1.5a3.5 3.5 0 0 0-2.5-3.35M15.5 4.15a3.5 3.5 0 0 1 0 6.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H6v18h12V7zM14 3v4h4M8.5 12.5h7M8.5 16.5h4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2 6.5L20.5 12 14 14l-2 7-2-7-6.5-2L10 9.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-brain" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.7C12 3.1 10.8 2 9.1 2 7.25 2 5.9 3.45 6.05 5.18 4.05 5.52 2.65 7.050 2.65 9.05 2.65 9.82 2.88 10.55 3.32 11.15 1.95 11.95 1.35 13.42 1.62 14.92 1.9 16.52 2.92 17.78 4.18 18.35 4.48 20.55 6.15 22 8.25 22 10.02 22 11.28 21.05 12 19.72Z"/><path d="M12 4.7C12 3.1 13.2 2 14.9 2 16.75 2 18.1 3.45 17.95 5.18 19.95 5.52 21.35 7.05 21.35 9.05 21.35 9.82 21.12 10.55 20.68 11.15 22.05 11.95 22.65 13.42 22.38 14.92 22.1 16.52 21.08 17.78 19.82 18.35 19.52 20.55 17.85 22 15.75 22 13.98 22 12.72 21.05 12 19.72Z"/><path d="M15.05 13C13.35 12.28 12.25 10.85 12 8.85 11.75 10.85 10.65 12.28 8.95 13"/><path d="M17.6 6.5C17.9 6.08 18 5.6 18 5.12M6 5.12C6 5.6 6.1 6.08 6.4 6.5M3.48 10.9C3.65 10.74 3.86 10.6 4.08 10.5M19.92 10.5C20.14 10.6 20.35 10.74 20.52 10.9M6 18C5.3 18 4.62 17.82 4.04 17.48M19.96 17.48C19.38 17.82 18.7 18 18 18"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="cursor" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<!-- indicador de capítulo (estilo Puture) -->
+<div class="chapter mono" aria-hidden="true">
+  <span class="chapter__n">00</span>
+  <span class="chapter__l"><small>Capítulo</small><b class="chapter__t">Início</b></span>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="nav">
+  <a href="#top" class="logo" aria-label="AdBrain.ai">
+    <img src="../../assets/adbrain-logo.svg" alt="" class="logo__mark" />
+    <span>AdBrain<i>.ai</i></span>
+  </a>
+  <nav class="nav__links" aria-label="Navegação principal">
+    <a href="#produto">Produto</a>
+    <a href="#para-quem">Para quem</a>
+    <a href="#planos">Planos</a>
+  </nav>
+  <div class="nav__cta">
+    <a href="https://adbrain.com.br/auth" class="link-u">Entrar</a>
+    <a href="https://adbrain.com.br/signup" class="btn btn--sm magnetic"><span>Testar grátis</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" data-chapter="00" data-title="Início">
+  <div class="beam" aria-hidden="true"></div>
+  <div class="floor" aria-hidden="true"></div>
+  <div class="tiles" aria-hidden="true">
+    <span class="tile" style="--x:52%;--y:16%;--s:1.15;--rx:14deg;--ry:-22deg;--d:.9"><svg><use href="#i-meta"/></svg></span>
+    <span class="tile" style="--x:70%;--y:10%;--s:1.35;--rx:-10deg;--ry:18deg;--d:1.3"><svg><use href="#i-brain"/></svg></span>
+    <span class="tile" style="--x:86%;--y:24%;--s:1;--rx:18deg;--ry:-14deg;--d:.7"><svg><use href="#i-google"/></svg></span>
+    <span class="tile" style="--x:60%;--y:38%;--s:.8;--rx:-16deg;--ry:-20deg;--d:.5"><svg><use href="#i-target"/></svg></span>
+    <span class="tile" style="--x:80%;--y:52%;--s:1.2;--rx:12deg;--ry:24deg;--d:1.1"><svg><use href="#i-trend"/></svg></span>
+    <span class="tile" style="--x:92%;--y:46%;--s:.75;--rx:-14deg;--ry:-12deg;--d:.6"><svg><use href="#i-doc"/></svg></span>
+    <span class="tile" style="--x:38%;--y:12%;--s:.65;--rx:20deg;--ry:10deg;--d:.4"><svg><use href="#i-spark"/></svg></span>
+    <span class="tile" style="--x:44%;--y:6%;--s:.55;--rx:10deg;--ry:-30deg;--d:.35"><svg><use href="#i-chart"/></svg></span>
+  </div>
+
+  <div class="hero__copy">
+    <p class="hero__eyebrow fade-up">Para agências, assessorias e gestores de tráfego</p>
+    <h1 class="hero__title">
+      <span class="line"><span class="split">Todas as contas</span></span>
+      <span class="line"><span class="split">dos seus clientes.</span></span>
+      <span class="line"><span class="split grad">Uma lista do que</span></span>
+      <span class="line"><span class="split grad">fazer hoje.</span></span>
+    </h1>
+  </div>
+  <div class="hero__side">
+    <p class="fade-up">Conecte o Meta Ads e o Google Ads de cada cliente. O AdBrain lê as campanhas, encontra o que trava o resultado e mostra onde agir primeiro.</p>
+    <div class="hero__ctas fade-up">
+      <a href="https://adbrain.com.br/signup" class="btn magnetic"><span>Conectar minhas contas</span><em>→</em></a>
+      <a href="#produto" class="btn btn--ghost magnetic"><span>Ver como funciona</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATEMENT ============ -->
+<section class="statement" data-chapter="01" data-title="Sobre">
+  <p class="statement__t">
+    Seus anúncios já têm <span class="hl">dados</span>.<br />
+    O AdBrain transforma esses dados em <span class="hl">decisões</span>.
+  </p>
+  <p class="statement__s">Uma leitura por cliente, com a ação certa no topo da lista.</p>
+</section>
+
+<!-- ============ SCROLL STORY (replica a 2ª seção do site atual) ============ -->
+<section class="story" id="produto" data-chapter="02" data-title="Produto">
+  <div class="story__texts">
+    <article class="chap" data-scene="0">
+      <span class="chap__k mono">01 · Integrações</span>
+      <h2>Tudo começa com as contas dos seus clientes.</h2>
+      <p>Conecte o Meta Ads e o Google Ads com login via OAuth. Você escolhe quais contas o AdBrain lê, e cada cliente fica no próprio workspace.</p>
+    </article>
+    <article class="chap" data-scene="1">
+      <span class="chap__k mono">02 · Dados</span>
+      <h2>Os dados mostram o que aconteceu.</h2>
+      <p>Investimento, alcance, cliques, CTR, CPC, CPA, ROAS e conversões organizados por cliente. Mas o número sozinho não diz o que fazer agora.</p>
+    </article>
+    <article class="chap" data-scene="2">
+      <span class="chap__k mono">03 · Interpretação</span>
+      <h2>O AdBrain lê o que os números estão dizendo.</h2>
+      <p>A IA cruza os sinais da conta com o contexto do negócio: objetivo, oferta e público. Uma queda de ROAS ganha causa e endereço.</p>
+    </article>
+    <article class="chap" data-scene="3">
+      <span class="chap__k mono">04 · Recomendação</span>
+      <h2>Uma ação clara, com motivo e evidência.</h2>
+      <p>Cada recomendação diz o que fazer, por que fazer, o que sustenta a análise e qual impacto esperar.</p>
+    </article>
+    <article class="chap" data-scene="4">
+      <span class="chap__k mono">05 · Acompanhamento</span>
+      <h2>Da análise à ação.</h2>
+      <p>Marque como implementada, adie ou ignore. O histórico mostra o que foi decidido e o que aconteceu depois.</p>
+    </article>
+    <article class="chap" data-scene="5">
+      <span class="chap__k mono">06 · Carteira</span>
+      <h2>Uma conta ou a carteira inteira.</h2>
+      <p>A saúde de cada cliente num só lugar. Você abre o dia sabendo onde olhar primeiro.</p>
+    </article>
+    <article class="chap" data-scene="6">
+      <span class="chap__k mono">07 · Relatórios</span>
+      <h2>A análise vira reunião.</h2>
+      <p>Relatório executivo com resumo, evidências e próximos passos, pronto para mandar ao cliente.</p>
+    </article>
+  </div>
+
+  <div class="story__stage">
+    <div class="stage">
+      <div class="stage__bar"><i></i><i></i><i></i><span class="mono">AdBrain · Loja Aurora</span></div>
+      <div class="stage__body">
+
+        <!-- 0 · integrações -->
+        <div class="scene is-on" data-scene="0">
+          <div class="sc-int">
+            <div class="sc-int__src">
+              <div class="plat"><span class="plat__ic"><svg><use href="#i-meta"/></svg></span><div><b>Meta Ads</b><small>12 contas conectadas</small></div></div>
+              <div class="plat"><span class="plat__ic"><svg><use href="#i-google"/></svg></span><div><b>Google Ads</b><small>8 contas conectadas</small></div></div>
+            </div>
+            <svg class="sc-int__wire" viewBox="0 0 120 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C60 30 60 60 120 60"/><path d="M0 90 C60 90 60 60 120 60"/></svg>
+            <div class="sc-int__core"><img src="../../assets/adbrain-logo.svg" alt="" /><small class="mono">Dados organizados</small></div>
+          </div>
+          <p class="sc-note mono">Próximas: TikTok Ads · CRM · Automações</p>
+        </div>
+
+        <!-- 1 · dados -->
+        <div class="scene" data-scene="1">
+          <div class="sc-kpis">
+            <div><small>Investimento</small><b>R$ 48,2 mil</b><em class="up">+12%</em></div>
+            <div><small>Impressões</small><b>1,8 mi</b><em class="up">+24%</em></div>
+            <div><small>Cliques</small><b>42.180</b><em class="up">+9%</em></div>
+            <div><small>CTR</small><b>2,34%</b><em class="down">−6%</em></div>
+            <div><small>CPC</small><b>R$ 1,14</b><em class="down">+8%</em></div>
+            <div><small>CPA</small><b>R$ 74,20</b><em class="down">+18%</em></div>
+            <div><small>ROAS</small><b>3,8x</b><em class="down">−18%</em></div>
+            <div><small>Conversões</small><b>650</b><em class="down">−7%</em></div>
+          </div>
+          <p class="sc-note">Mas não dizem o que fazer agora.</p>
+        </div>
+
+        <!-- 2 · interpretação -->
+        <div class="scene" data-scene="2">
+          <div class="sc-ctx">
+            <div class="sc-ctx__sig"><small class="mono">Sinal isolado</small><b>ROAS caiu 18%</b>
+              <svg viewBox="0 0 300 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 14 C40 12 70 20 110 16 C150 12 170 22 200 32 C230 44 260 56 300 62"/></svg>
+            </div>
+            <ul class="sc-ctx__list">
+              <li><small class="mono">Objetivo</small>Gerar oportunidades qualificadas</li>
+              <li><small class="mono">Oferta</small>Diagnóstico estratégico</li>
+              <li><small class="mono">Público</small>Operações com mídia paga ativa</li>
+            </ul>
+          </div>
+          <p class="sc-note">A queda está concentrada em uma campanha, depois que a verba foi redistribuída.</p>
+        </div>
+
+        <!-- 3 · recomendação -->
+        <div class="scene" data-scene="3">
+          <div class="sc-rec">
+            <span class="pill pill--hot">Prioridade alta</span>
+            <h3>Redistribua parte do investimento.</h3>
+            <dl>
+              <div><dt class="mono">Por quê</dt><dd>A campanha concentra grande parte da verba e rende abaixo da média da conta.</dd></div>
+              <div><dt class="mono">Evidência</dt><dd>A queda de ROAS está isolada nessa campanha.</dd></div>
+              <div><dt class="mono">Impacto</dt><dd>Recuperar eficiência antes de escalar.</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- 4 · acompanhamento -->
+        <div class="scene" data-scene="4">
+          <ol class="sc-flow">
+            <li class="done"><span>1</span><b>Identificada</b><small>Gargalo detectado</small></li>
+            <li class="done"><span>2</span><b>Recomendação</b><small>Ação definida</small></li>
+            <li class="now"><span>3</span><b>Implementada</b><small>Marcada pelo gestor</small></li>
+            <li><span>4</span><b>Em acompanhamento</b><small>Resultado medido</small></li>
+          </ol>
+          <p class="sc-note">Histórico de decisões: o que foi recomendado, decidido e acompanhado.</p>
+        </div>
+
+        <!-- 5 · carteira -->
+        <div class="scene" data-scene="5">
+          <div class="sc-port">
+            <div><span class="dot dot--ok"></span><b>Clínica Norte</b><strong>82</strong><small>Saudável</small></div>
+            <div><span class="dot dot--warn"></span><b>Ecommerce Solar</b><strong>61</strong><small>Atenção</small></div>
+            <div><span class="dot dot--hot"></span><b>B2B Growth</b><strong>38</strong><small>Crítico</small></div>
+            <div><span class="dot dot--ok"></span><b>Escola Viva</b><strong>76</strong><small>Saudável</small></div>
+            <div><span class="dot dot--warn"></span><b>Studio Alto</b><strong>55</strong><small>Atenção</small></div>
+            <div><span class="dot dot--ok"></span><b>D2C Labs</b><strong>64</strong><small>Saudável</small></div>
+          </div>
+        </div>
+
+        <!-- 6 · relatórios -->
+        <div class="scene" data-scene="6">
+          <div class="sc-doc">
+            <small class="mono">Relatório executivo · Loja Aurora</small>
+            <h3>Resumo da semana</h3>
+            <ul>
+              <li><svg><use href="#i-check"/></svg>ROAS em recuperação após redistribuição de verba</li>
+              <li><svg><use href="#i-check"/></svg>2 criativos trocados por fadiga</li>
+              <li><svg><use href="#i-check"/></svg>Próximo passo: testar escala na campanha eficiente</li>
+            </ul>
+            <span class="sc-doc__btn">Enviar ao cliente</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="stage__dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUEM ============ -->
+<section class="who" id="para-quem" data-chapter="03" data-title="Para quem">
+  <p class="kicker mono">Para quem</p>
+  <h2 class="h2"><span class="line"><span class="split">Feito para quem cuida</span></span><span class="line"><span class="split dim">da verba dos outros.</span></span></h2>
+  <div class="who__rows">
+    <div class="who__row">
+      <span class="who__k mono">Agências</span>
+      <p class="who__t">Dez clientes, uma fila de prioridades.</p>
+      <p class="who__p">Abra o dia sabendo em qual conta agir primeiro, sem passar cliente por cliente no gerenciador.</p>
+    </div>
+    <div class="who__row">
+      <span class="who__k mono">Assessorias</span>
+      <p class="who__t">Chegue na reunião com diagnóstico, não com print.</p>
+      <p class="who__p">Relatório com resumo, evidências e próximos passos, pronto para o cliente.</p>
+    </div>
+    <div class="who__row">
+      <span class="who__k mono">Gestores de tráfego</span>
+      <p class="who__t">Menos tempo caçando problema, mais tempo otimizando.</p>
+      <p class="who__p">A leitura da conta vem pronta. Você decide e registra o que foi feito.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLANOS ============ -->
+<section class="plans" id="planos" data-chapter="04" data-title="Planos">
+  <p class="kicker mono">Planos founding</p>
+  <h2 class="h2"><span class="line"><span class="split">Escolha pelo tamanho</span></span><span class="line"><span class="split dim">da sua carteira.</span></span></h2>
+  <div class="plans__cols">
+    <div class="plan">
+      <p class="plan__name">Gestor Solo</p>
+      <p class="plan__for">Para o gestor independente</p>
+      <p class="plan__price"><small>R$</small><span class="count" data-to="147">147</span><em>/mês</em></p>
+      <ul><li>Até 3 clientes ativos</li><li>1 usuário</li><li>150 créditos por mês</li></ul>
+      <a href="https://adbrain.com.br/signup" class="link-arrow">Testar 7 dias grátis <span>→</span></a>
+    </div>
+    <div class="plan plan--hot">
+      <p class="plan__name">Agência <span class="mono">Mais escolhido</span></p>
+      <p class="plan__for">Para agências e assessorias</p>
+      <p class="plan__price"><small>R$</small><span class="count" data-to="297">297</span><em>/mês</em></p>
+      <ul><li>Até 10 clientes ativos</li><li>3 usuários</li><li>500 créditos por mês</li></ul>
+      <a href="https://adbrain.com.br/signup" class="btn magnetic"><span>Testar 7 dias grátis</span><em>→</em></a>
+    </div>
+    <div class="plan">
+      <p class="plan__name">Agência Pro</p>
+      <p class="plan__for">Para operações com muitas contas</p>
+      <p class="plan__price"><small>R$</small><span class="count" data-to="497">497</span><em>/mês</em></p>
+      <ul><li>Até 25 clientes ativos</li><li>5 usuários e vários workspaces</li><li>1.200 créditos por mês</li></ul>
+      <a href="https://adbrain.com.br/signup" class="link-arrow">Testar 7 dias grátis <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="final" data-chapter="05" data-title="Comece">
+  <div class="beam beam--center" aria-hidden="true"></div>
+  <p class="final__t">
+    <span class="line"><span class="split">Os dados dos seus clientes</span></span>
+    <span class="line"><span class="split">já estão falando.</span></span>
+    <span class="line"><span class="split grad">Está na hora de ouvir.</span></span>
+  </p>
+  <a href="https://adbrain.com.br/signup" class="btn btn--xl magnetic"><span>Conectar minhas contas</span><em>→</em></a>
+  <p class="final__s mono">7 dias grátis · Login via OAuth, sem senha</p>
+</section>
+
+</main>
+
+<footer class="foot">
+  <a href="#top" class="logo"><img src="../../assets/adbrain-logo.svg" alt="" class="logo__mark" /><span>AdBrain<i>.ai</i></span></a>
+  <nav class="foot__links">
+    <a href="https://adbrain.com.br/privacy" class="link-u">Privacidade</a>
+    <a href="https://adbrain.com.br/terms" class="link-u">Termos</a>
+    <a href="https://adbrain.com.br/data-deletion" class="link-u">Exclusão de dados</a>
+    <a href="mailto:suporte@adbrain.com.br" class="link-u">Contato</a>
+  </nav>
+  <span class="mono foot__c">© 2026 AdBrain.ai · Ecossistema Crxate</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

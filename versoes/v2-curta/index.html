@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AdBrain.ai — Do dado à decisão</title>
+<meta name="description" content="Conecte Meta e Google Ads. O AdBrain aponta o que está travando sua performance e qual ação tomar primeiro." />
+<link rel="icon" href="../../assets/mark-v2-nos.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<!-- ============ HEADER ============ -->
+<header class="nav">
+  <a href="#top" class="logo" aria-label="AdBrain.ai">
+    <img src="../../assets/mark-v2-nos.svg" alt="" class="logo__mark" />
+    <span>Ad<b>Brain</b><i>.ai</i></span>
+  </a>
+  <nav class="nav__links" aria-label="Navegação principal">
+    <a href="#como" data-cursor="hover">Como funciona</a>
+    <a href="#demo" data-cursor="hover">Na prática</a>
+    <a href="#planos" data-cursor="hover">Planos</a>
+  </nav>
+  <div class="nav__cta">
+    <a href="https://adbrain.com.br/auth" class="link-u" data-cursor="hover">Entrar</a>
+    <a href="https://adbrain.com.br/signup" class="btn btn--sm magnetic" data-cursor="hover"><span>Testar grátis</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <div class="badge fade-up"><span class="dot dot--live"></span>Inteligência estratégica para mídia paga</div>
+      <h1 class="hero__title">
+        <span class="line"><span class="split">Seus anúncios têm dados.</span></span>
+        <span class="line"><span class="split grad">Nós entregamos decisões.</span></span>
+      </h1>
+      <p class="hero__sub fade-up">
+        Conecte Meta e Google Ads. A IA aponta o que está travando sua performance e qual ação tomar primeiro — com o impacto estimado.
+      </p>
+      <div class="hero__ctas fade-up">
+        <a href="https://adbrain.com.br/signup" class="btn magnetic" data-cursor="hover"><span>Começar 7 dias grátis</span><em>→</em></a>
+        <a href="#demo" class="btn btn--ghost magnetic" data-cursor="hover"><span>Ver na prática</span></a>
+      </div>
+      <ul class="trust mono fade-up">
+        <li>Meta Ads + Google Ads</li>
+        <li>Login via OAuth, sem senha</li>
+        <li>7 dias grátis</li>
+      </ul>
+    </div>
+
+    <div class="hero__visual">
+      <canvas class="brain" aria-hidden="true"></canvas>
+      <div class="chip chip--a">
+        <span class="dot dot--hot"></span>
+        <span class="mono chip__k">ROAS</span>
+        <span class="chip__v">−18%</span>
+        <span class="chip__s">detectado</span>
+      </div>
+      <div class="chip chip--b">
+        <span class="mono chip__tag"><span class="dot dot--hot"></span>Prioridade alta</span>
+        <span class="chip__t">Redistribua parte do investimento.</span>
+        <span class="chip__s">Impacto visível em 48–72h</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section class="how" id="como">
+  <div class="section-head">
+    <div class="label mono"><span>(01)</span><span>Como funciona</span></div>
+    <h2 class="h2"><span class="line"><span class="split">Três passos.</span></span><span class="line"><span class="split muted">Nenhum dashboard a mais.</span></span></h2>
+  </div>
+  <div class="how__rail" aria-hidden="true"><i></i></div>
+  <ol class="how__steps">
+    <li class="step">
+      <span class="step__n mono">01</span>
+      <h3>Conecte</h3>
+      <p>Autorize suas contas de anúncio com um clique. Sem compartilhar senha.</p>
+    </li>
+    <li class="step">
+      <span class="step__n mono">02</span>
+      <h3>A IA analisa</h3>
+      <p>Cruza investimento, CTR, CPA, ROAS e o contexto do seu negócio.</p>
+    </li>
+    <li class="step">
+      <span class="step__n mono">03</span>
+      <h3>Você decide</h3>
+      <p>Recebe a ação prioritária com motivo, evidência e impacto estimado.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ DEMO (pinned) ============ -->
+<section class="diag" id="demo">
+  <div class="diag__pin">
+    <div class="diag__left">
+      <div class="label mono"><span>(02)</span><span>Na prática</span></div>
+      <h2 class="h2 diag__title">
+        <span class="diag__step is-on">O número caiu. Mas por quê?</span>
+        <span class="diag__step">O AdBrain encontra a causa.</span>
+        <span class="diag__step">E diz o que fazer agora.</span>
+      </h2>
+      <div class="diag__progress mono">
+        <span class="diag__num">01</span><span class="diag__track"><i></i></span><span>03</span>
+      </div>
+    </div>
+
+    <div class="diag__right">
+      <div class="signal card">
+        <div class="card__top mono"><span class="dot dot--hot"></span>Sinal isolado</div>
+        <div class="signal__v">ROAS caiu <b>18%</b></div>
+        <svg class="spark" viewBox="0 0 600 80" preserveAspectRatio="none" aria-hidden="true">
+          <path class="spark__path" d="M0,20 C60,18 100,26 160,22 C220,18 260,24 320,30 C380,36 420,52 480,58 C520,62 560,66 600,70" />
+        </svg>
+      </div>
+
+      <div class="diagnose card">
+        <div class="card__top mono">Diagnóstico</div>
+        <p>A queda está concentrada em <b>uma campanha</b>, após mudança na distribuição de investimento.</p>
+      </div>
+
+      <div class="rec card">
+        <div class="card__top mono"><span class="dot dot--hot"></span>Recomendação · prioridade alta</div>
+        <div class="rec__grid">
+          <div class="rec__f"><span class="mono">Ação</span><p>Redistribua parte do investimento.</p></div>
+          <div class="rec__f"><span class="mono">Motivo</span><p>Muita verba numa campanha com eficiência abaixo da média.</p></div>
+          <div class="rec__f"><span class="mono">Evidência</span><p>Queda de ROAS isolada em 1 campanha.</p></div>
+          <div class="rec__f"><span class="mono">Impacto</span><p>Recuperar eficiência antes de escalar.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLANOS ============ -->
+<section class="plans" id="planos">
+  <div class="section-head">
+    <div class="label mono"><span>(03)</span><span>Planos</span></div>
+    <h2 class="h2"><span class="line"><span class="split">Comece grátis.</span></span><span class="line"><span class="split grad">Decida melhor hoje.</span></span></h2>
+  </div>
+  <div class="plans__grid">
+    <article class="plan" data-cursor="hover">
+      <div class="plan__name mono">Gestor Solo</div>
+      <p class="plan__for">Para gestores de tráfego</p>
+      <div class="plan__price"><small>R$</small><span class="count" data-to="147">147</span><em>/mês</em></div>
+      <ul>
+        <li>Até 3 clientes ativos</li>
+        <li>150 créditos/mês</li>
+      </ul>
+      <a href="https://adbrain.com.br/signup" class="btn btn--ghost btn--block magnetic"><span>Testar 7 dias grátis</span></a>
+    </article>
+    <article class="plan plan--hot" data-cursor="hover">
+      <div class="plan__badge mono">Mais escolhido</div>
+      <div class="plan__name mono">Agência</div>
+      <p class="plan__for">Para agências e times</p>
+      <div class="plan__price"><small>R$</small><span class="count" data-to="297">297</span><em>/mês</em></div>
+      <ul>
+        <li>Até 10 clientes · 3 usuários</li>
+        <li>500 créditos/mês</li>
+      </ul>
+      <a href="https://adbrain.com.br/signup" class="btn btn--block magnetic"><span>Testar 7 dias grátis</span></a>
+    </article>
+    <article class="plan" data-cursor="hover">
+      <div class="plan__name mono">Agência Pro</div>
+      <p class="plan__for">Para operações em escala</p>
+      <div class="plan__price"><small>R$</small><span class="count" data-to="497">497</span><em>/mês</em></div>
+      <ul>
+        <li>Até 25 clientes · 5 usuários</li>
+        <li>1.200 créditos/mês</li>
+      </ul>
+      <a href="https://adbrain.com.br/signup" class="btn btn--ghost btn--block magnetic"><span>Testar 7 dias grátis</span></a>
+    </article>
+  </div>
+  <p class="plans__note mono">Preços founding · Seus dados continuam seus: OAuth, contas escolhidas por você e workspaces isolados.</p>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="final">
+  <p class="final__a">Seus dados já estão falando.</p>
+  <p class="final__b grad">Está na hora de ouvi-los.</p>
+  <a href="https://adbrain.com.br/signup" class="btn btn--xl magnetic" data-cursor="hover"><span>Começar 7 dias grátis</span><em>→</em></a>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__word" aria-hidden="true"><span>AdBrain</span></div>
+  <div class="foot__bottom">
+    <span class="mono">© 2026 AdBrain.ai · Ecossistema Crxate</span>
+    <nav class="foot__links">
+      <a href="https://adbrain.com.br/privacy" class="link-u">Privacidade</a>
+      <a href="https://adbrain.com.br/terms" class="link-u">Termos</a>
+      <a href="https://adbrain.com.br/data-deletion" class="link-u">Exclusão de dados</a>
+      <a href="mailto:suporte@adbrain.com.br" class="link-u">Contato</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
