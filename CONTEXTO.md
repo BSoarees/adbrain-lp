@@ -25,6 +25,8 @@ Deixar o ecossistema AdBrain com acabamento mais premium sem trocar a identidade
 
 Regras de texto: sem travessões, sem frases de efeito vazias, sem caixas e cards desnecessários.
 
+Regra visual ("menos cara de IA"): evitar cards com borda brilhante, pílulas e caixas em volta de tudo. O cadastro segue um estilo editorial: o formulário fica direto no fundo, os campos têm só a linha de baixo, os passos usam números "01 02 03" com divisórias finas, e as regras de senha são texto que acende.
+
 ## Estrutura da LP
 
 1. **Hero:** "Todas as contas dos seus clientes. Uma lista do que fazer hoje."
