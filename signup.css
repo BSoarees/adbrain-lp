@@ -4,13 +4,15 @@
 .su .beam { position: fixed; z-index: 0; opacity: .55; }
 .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-.su-nav { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px var(--pad); }
+.su-nav { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; max-width: calc(var(--w) + 2 * var(--pad)); margin: 0 auto; padding: 22px var(--pad); }
 .su-nav__in { color: var(--muted); font-size: 14px; }
 .su-nav__in b { color: var(--ink); font-weight: 600; }
 .su-nav__in:hover b { color: var(--sky); }
 
-/* mesmas margens do header: o conteúdo alinha com o logo */
-.su-main { position: relative; z-index: 1; flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); align-items: start; gap: clamp(40px, 8vw, 140px); padding: clamp(24px, 7vh, 80px) var(--pad) 64px; }
+/* header, conteúdo e rodapé dividem a mesma largura máxima, centralizada:
+   em tela larga o conjunto fica no meio em vez de se espalhar até as bordas */
+.su { --w: 1160px; }
+.su-main { position: relative; z-index: 1; flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); align-content: center; align-items: center; gap: clamp(48px, 7vw, 120px); width: 100%; max-width: calc(var(--w) + 2 * var(--pad)); margin: 0 auto; padding: clamp(24px, 5vh, 64px) var(--pad) 64px; }
 
 /* ---------- esquerda ---------- */
 .su-eyebrow { color: var(--sky); }
@@ -76,7 +78,7 @@
 .su-done h2 { font-size: 28px; font-weight: 700; letter-spacing: -.03em; }
 .su-done p { color: var(--muted); max-width: 360px; }
 
-.su-foot { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 16px; padding: 20px var(--pad) 28px; color: var(--dim); border-top: 1px solid var(--hair); }
+.su-foot { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 16px; width: 100%; max-width: calc(var(--w) + 2 * var(--pad)); margin: 0 auto; padding: 20px var(--pad) 28px; color: var(--dim); background: linear-gradient(var(--hair), var(--hair)) top center / calc(100% - 2 * var(--pad)) 1px no-repeat; }
 
 /* ---------- celular: título, formulário, depois os passos ---------- */
 .su-after { display: none; }
