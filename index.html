@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20261030a" />
+<link rel="stylesheet" href="styles.css?v=20261030b" />
 </head>
 <body>
 
@@ -82,24 +82,22 @@
     </div>
   </div>
 
-  <!-- painel: contas conectadas → AdBrain → decisões por cliente -->
-  <div class="hflow fade-up" aria-label="Contas do Meta Ads e do Google Ads viram decisões priorizadas por cliente">
-    <div class="hflow__head mono"><span class="dot dot--ok"></span>Contas conectadas</div>
-    <div class="hflow__src">
-      <div class="hsrc"><span class="hsrc__logo"><img src="assets/logos/meta.svg" alt="" /></span><div><b>Meta Ads</b><small>12 contas</small></div><span class="hsrc__ok">Conectado</span></div>
-      <div class="hsrc"><span class="hsrc__logo"><img src="assets/logos/google-ads.svg" alt="" /></span><div><b>Google Ads</b><small>8 contas</small></div><span class="hsrc__ok">Conectado</span></div>
+  <!-- rede: plataformas → AdBrain → decisões por cliente (nós e linhas, sem caixas) -->
+  <div class="net fade-up" aria-label="Contas do Meta Ads e do Google Ads conectadas ao AdBrain viram decisões priorizadas por cliente">
+    <svg class="net__wires" aria-hidden="true"></svg>
+    <div class="net__src">
+      <div class="nsrc"><span class="nsrc__dot" data-node="src"><img src="assets/logos/meta.svg" alt="" /></span><b>Meta Ads</b><small>12 contas conectadas</small></div>
+      <div class="nsrc"><span class="nsrc__dot" data-node="src"><img src="assets/logos/google-ads.svg" alt="" /></span><b>Google Ads</b><small>8 contas conectadas</small></div>
     </div>
-    <div class="hflow__core">
-      <span class="hflow__line"><i></i></span>
-      <img src="assets/adbrain-logo.svg" alt="" />
-      <span class="mono">AdBrain analisando</span>
-      <span class="hflow__line"><i></i></span>
+    <div class="net__core">
+      <span class="net__rings" data-node="core"><i></i><i></i><img src="assets/adbrain-logo.svg" alt="" /></span>
+      <span class="net__core-l mono">AdBrain</span>
     </div>
-    <div class="hflow__head mono">Onde agir hoje</div>
-    <div class="hflow__out">
-      <div class="hout"><span class="hout__c mono">Loja Aurora</span><b>Redistribuir verba</b><span class="tag tag--hot">Alta</span></div>
-      <div class="hout"><span class="hout__c mono">Clínica Sorriso</span><b>Trocar criativos com fadiga</b><span class="tag tag--warn">Média</span></div>
-      <div class="hout"><span class="hout__c mono">EduPrime</span><b>Escalar campanha eficiente</b><span class="tag tag--ok">Oportunidade</span></div>
+    <div class="net__out">
+      <span class="net__k mono">Onde agir hoje</span>
+      <div class="nout"><span class="nout__dot nout__dot--hot" data-node="out"></span><div><small class="mono">Loja Aurora · <em class="hot">Alta</em></small><b>Redistribuir verba</b></div></div>
+      <div class="nout"><span class="nout__dot nout__dot--warn" data-node="out"></span><div><small class="mono">Clínica Sorriso · <em class="warn">Média</em></small><b>Trocar criativos com fadiga</b></div></div>
+      <div class="nout"><span class="nout__dot nout__dot--ok" data-node="out"></span><div><small class="mono">EduPrime · <em class="ok">Oportunidade</em></small><b>Escalar campanha eficiente</b></div></div>
     </div>
   </div>
 </section>
@@ -379,6 +377,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="main.js?v=20261030a"></script>
+<script src="main.js?v=20261030b"></script>
 </body>
 </html>

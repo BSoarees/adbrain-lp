@@ -30,7 +30,7 @@ Regra visual ("menos cara de IA"): evitar cards com borda brilhante, pílulas e 
 ## Estrutura da LP
 
 1. **Hero:** "Todas as contas dos seus clientes. Uma lista do que fazer hoje."
-   - À direita, um painel com Meta Ads e Google Ads conectados → AdBrain → "Onde agir hoje" por cliente.
+   - À direita, uma rede no estilo das conexões da Endeavor, sem caixas: Meta Ads e Google Ads em círculos, ligados por linhas curvas ao AdBrain (com anéis) e dele aos clientes, que aparecem como pontos coloridos pela prioridade. Sinais correm pelas linhas. No celular a rede fica vertical.
    - Abaixo dos botões, a faixa "Integra com" e o selo Google Partner.
 2. **Frase central:** "Seus anúncios já têm dados. O AdBrain transforma esses dados em decisões."
    - As duas palavras se pintam em degradê conforme a rolagem.
